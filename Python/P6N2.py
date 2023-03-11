@@ -1,8 +1,7 @@
 import math
 n=int(input("introduzca n: "))
 k=int(input("introduzca k: "))
-cd=int(math.log(n, 10)+1)
-#cd=((math.log(n, 10)+1)//1) 
+cd=int(math.log10(n)+1)
 d=0; z=0
 y=0; c=0; po=1; g=0
 while n!=0:
@@ -21,7 +20,6 @@ if cd%k==0:
     g=y*po+g
     po=po*(10**(k))
 else:
-    #cdz=((math.log(z, 10)+1)//1)
-    cdz=int(math.log(z, 10)+1)
+    cdz=int(math.log10(z)+1)
     g=z*(10**(cd-cdz))+g
 print(g)

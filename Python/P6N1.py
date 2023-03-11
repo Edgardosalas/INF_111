@@ -1,6 +1,7 @@
+import math
 n=int(input("Introduzca n: "))
-#cd=math.log(n, 10)+1
-p=0; y=0 ; cd=5; po=1
+cd=int(math.log10(n)+1)
+p=0; y=0; po=1
 if cd%2==0:
     while n!=0:
         d=n%10
