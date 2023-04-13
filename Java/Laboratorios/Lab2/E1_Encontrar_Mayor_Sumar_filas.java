@@ -1,59 +1,59 @@
 package Laboratorios.Lab2;
 import java.util.Scanner;
 public class E1_Encontrar_Mayor_Sumar_filas {
-    static public int a[][]=new int[10][10];
-    static public int b[]=new int[10];
-    static public int pi, pj;
-    static void llenarm(int n, int m)
-    { int i, j;
+    static public int asbe[][]=new int[10][10];
+    static public int bsbe[]=new int[10];
+    static public int pisbe, pjsbe;
+    static void llenarm(int nsbe, int msbe)
+    { int isbe, jsbe;
     	Scanner sc = new Scanner(System.in);
-        for (i=1;i<=n;i++)
-        {	for (j=1;j<=m;j++)
-            {System.out.println("a["+i+"]["+j+"]=");
-            	a[i][j]=sc.nextInt();
+        for (isbe=1;isbe<=nsbe;isbe++)
+        {	for (jsbe=1;jsbe<=msbe;jsbe++)
+            {System.out.println("asbe["+isbe+"]["+jsbe+"]=");
+            	asbe[isbe][jsbe]=sc.nextInt();
             }
         }
     }
-    static void mostrarm(int n, int m)
-    { int i, j;
+    static void mostrarm(int nsbe, int msbe)
+    { int isbe, jsbe;
     System.out.println("\n");
-        for (i=1;i<=n;i++)
-        {	for (j=1;j<=m;j++)
-            {System.out.print("\t"+a[i][j]);
+        for (isbe=1;isbe<=nsbe;isbe++)
+        {	for (jsbe=1;jsbe<=msbe;jsbe++)
+            {System.out.print("\t"+asbe[isbe][jsbe]);
             }
         	System.out.println("\n");
         }
     }
-    static void mostrarv(int t)
-    { int i;
+    static void mostrarv(int tsbe)
+    { int isbe;
     System.out.println("\n");
-        for (i=1;i<=t;i++)
-        {System.out.print("\t"+b[i]);
+        for (isbe=1;isbe<=tsbe;isbe++)
+        {System.out.print("\t"+bsbe[isbe]);
         }
     }
-    static void maysumar (int n, int m)
-    {int may=0, s=0, i, j;
-    	for (i=1;i<=n;i++)
-    	{	for (j=1;j<=m;j++)
-    		{if (a[i][j]>may)
-    			{may=a[i][j];
-    				pi=i; pj=j;
+    static void maysumar (int nsbe, int msbe)
+    {int maysbe=0, ssbe=0, isbe, jsbe;
+    	for (isbe=1;isbe<=nsbe;isbe++)
+    	{	for (jsbe=1;jsbe<=msbe;jsbe++)
+    		{if (asbe[isbe][jsbe]>maysbe)
+    			{maysbe=asbe[isbe][jsbe];
+    				pisbe=isbe; pjsbe=jsbe;
     			}
-    		s=s+a[i][j];
+    		ssbe=ssbe+asbe[isbe][jsbe];
     		}
-    	b[i]=s; s=0;
+    	bsbe[isbe]=ssbe; ssbe=0;
     	}
     }
     public static void main(String[] args)
-    {   int n,m;
+    {   int nsbe,msbe;
         Scanner sc = new Scanner(System.in);
-        System.out.println("Intro n y m");
-        n=sc.nextInt();
-        m=sc.nextInt();
-        llenarm(n,m);
-        maysumar(n,m);
-        mostrarm(n,m);
-        System.out.println(" "+a[pi][pj]);
-        mostrarv(n);
+        System.out.println("Intro nsbe y msbe");
+        nsbe=sc.nextInt();
+        msbe=sc.nextInt();
+        llenarm(nsbe,msbe);
+        maysumar(nsbe,msbe);
+        mostrarm(nsbe,msbe);
+        System.out.println(" "+asbe[pisbe][pjsbe]);
+        mostrarv(nsbe);
     }
 }

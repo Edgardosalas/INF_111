@@ -1,47 +1,47 @@
 package Laboratorios.Lab1;
 import java.util.Scanner;
 public class E2_Rotar_impares_izquierda {
-        static public int a[]=new int[20];
-        static public void llenarv(int t)
-        {int i;
+        static public int asbe[]=new int[20];
+        static public void llenarv(int tsbe)
+        {int isbe;
             Scanner sc=new Scanner(System.in);
-            for (i=1;i<=t;i++)
+            for (isbe=1;isbe<=tsbe;isbe++)
             {
-                System.out.println(" a["+i+"]=");
-                a[i]=sc.nextInt();
+                System.out.println(" asbe["+isbe+"]=");
+                asbe[isbe]=sc.nextInt();
             }
         }
-        static public void mostrarv(int t)
-        {int i;
+        static public void mostrarv(int tsbe)
+        {int isbe;
             System.out.println("");
-            for (i=1;i<=t;i++)
+            for (isbe=1;isbe<=tsbe;isbe++)
             {
-                System.out.print(" "+ a[i]);
+                System.out.print(" "+ asbe[isbe]);
             }
         }
-        static public void impar(int t)
-        {int i, x=0,p=0,k=0;
-            for (i=1;i<=t;i++)
-            {	if (a[i]%2==1)
-                {	if (k==0)
-                    {	x=a[i]; p=i; k=1;}
+        static public void impar(int tsbe)
+        {int isbe, xsbe=0,psbe=0,ksbe=0;
+            for (isbe=1;isbe<=tsbe;isbe++)
+            {	if (asbe[isbe]%2==1)
+                {	if (ksbe==0)
+                    {	xsbe=asbe[isbe]; psbe=isbe; ksbe=1;}
                     else
-                    {	a[p]=a[i]; p=i;}
+                    {	asbe[psbe]=asbe[isbe]; psbe=isbe;}
                 }
             }
-            if (k==1) {	a[p]=x;}
+            if (ksbe==1) {	asbe[psbe]=xsbe;}
         }
         public static void main(String[] args) 
-        {int n,k,i,x,y,pos;
-            k=0; x=0; pos=0;
+        {int nsbe,ksbe,isbe,xsbe,ysbe,possbe;
+            ksbe=0; xsbe=0; possbe=0;
             Scanner sc = new Scanner(System.in);
             do
             {	System.out.println("intro tam de vec");
-                n=sc.nextInt();
-            }while(n>20);
-            llenarv(n);
-            mostrarv(n);
-            impar(n);
-            mostrarv(n);
+                nsbe=sc.nextInt();
+            }while(nsbe>20);
+            llenarv(nsbe);
+            mostrarv(nsbe);
+            impar(nsbe);
+            mostrarv(nsbe);
         }
     }

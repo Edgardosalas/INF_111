@@ -1,45 +1,45 @@
 package Laboratorios.Lab1;
 import java.util.Scanner;
 public class E6_Busqueda_Secuencial {
-    static public int a[]=new int[20];
-    static public void llenarv(int t)
-    {int i;
+    static public int asbe[]=new int[20];
+    static public void llenarv(int tsbe)
+    {int isbe;
         Scanner sc = new Scanner(System.in);
-            for (i=1;i<=t;i++)
+            for (isbe=1;isbe<=tsbe;isbe++)
             {
-                System.out.println(" a["+i+"]=");
-                a[i]=sc.nextInt();
+                System.out.println(" asbe["+isbe+"]=");
+                asbe[isbe]=sc.nextInt();
             }
         }
-    static public void mostrarv(int t)
-    { int i;
+    static public void mostrarv(int tsbe)
+    { int isbe;
         System.out.println("");
-        for (i=1;i<=t;i++)
+        for (isbe=1;isbe<=tsbe;isbe++)
         {
-            System.out.print(" "+ a[i]);
+            System.out.print(" "+ asbe[isbe]);
         }
     }
-    static int bussec(int t, int x)
-    {int k=1;
-    	while(x!=a[k] && k<=t)
-    	{	k=k+1;
+    static int bussec(int tsbe, int xsbe)
+    {int ksbe=1;
+    	while(xsbe!=asbe[ksbe] && ksbe<=tsbe)
+    	{	ksbe=ksbe+1;
     	}
-    	if(x!=a[k]) {k=-1;}
-    	return k;
+    	if(xsbe!=asbe[ksbe]) {ksbe=-1;}
+    	return ksbe;
     }
     public static void main(String[] args)
-    {   int n, z;
+    {   int nsbe, zsbe;
         Scanner sc = new Scanner(System.in);
         do
-        {   System.out.println("intro n");
-            n=sc.nextInt();
-        }while (n>20);
-        llenarv(n);
-        mostrarv(n);
-        System.out.println("\nintro elem a buscar ");
-        z=sc.nextInt();
-        if (bussec(n,z)!= -1)
-        {System.out.println("\n "+z+" esta en posi "+bussec(n,z));}
+        {   System.out.println("intro nsbe");
+            nsbe=sc.nextInt();
+        }while (nsbe>20);
+        llenarv(nsbe);
+        mostrarv(nsbe);
+        System.out.println("\nintro elem asbe buscar ");
+        zsbe=sc.nextInt();
+        if (bussec(nsbe,zsbe)!= -1)
+        {System.out.println("\n "+zsbe+" esta en posi "+bussec(nsbe,zsbe));}
         else
         {System.out.println(" \nnoexiste ");}
     }

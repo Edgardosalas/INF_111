@@ -1,45 +1,45 @@
 package Laboratorios.Lab2;
 import java.util.Scanner;
 public class E5_Cambiar_Triangular_Superior_Por_Inferior_sobre_DIagonal_Secundaria {
-    static public int a[][]=new int[10][10];
-    static void llenarm(int n)
-    { int i, j;
+    static public int asbe[][]=new int[10][10];
+    static void llenarm(int nsbe)
+    { int isbe, jsbe;
     	Scanner sc = new Scanner(System.in);
-        for (i=1;i<=n;i++)
-        {	for (j=1;j<=n;j++)
-            {System.out.println("a["+i+"]["+j+"]=");
-            	a[i][j]=sc.nextInt();
+        for (isbe=1;isbe<=nsbe;isbe++)
+        {	for (jsbe=1;jsbe<=nsbe;jsbe++)
+            {System.out.println("asbe["+isbe+"]["+jsbe+"]=");
+            	asbe[isbe][jsbe]=sc.nextInt();
             }
         }
     }
-    static void mostrarm(int n)
-    { int i, j;
-    System.out.println("\n");
-        for (i=1;i<=n;i++)
-        {	for (j=1;j<=n;j++)
-            {System.out.print("\t"+a[i][j]);
+    static void mostrarm(int nsbe)
+    { int isbe, jsbe;
+    System.out.println("\nsbe");
+        for (isbe=1;isbe<=nsbe;isbe++)
+        {	for (jsbe=1;jsbe<=nsbe;jsbe++)
+            {System.out.print("\t"+asbe[isbe][jsbe]);
             }
-        	System.out.println("\n");
+        	System.out.println("\nsbe");
         }
     }
-    static void intertds(int n)
-    {int n1,i1,j1,x,i,j;
-    	n1=n; i1=n; j1=n;
-    	for (i=1;i<=n-1;i++)
-    	{	for (j=1;j<=n1-1;j++)
-    		{	x=a[i][j]; a[i][j]=a[i1][j1]; a[i1][j1]=x; i1=i1-1;
+    static void intertds(int nsbe)
+    {int n1sbe,i1sbe,j1sbe,xsbe,isbe,jsbe;
+    	n1sbe=nsbe; i1sbe=nsbe; j1sbe=nsbe;
+    	for (isbe=1;isbe<=nsbe-1;isbe++)
+    	{	for (jsbe=1;jsbe<=n1sbe-1;jsbe++)
+    		{	xsbe=asbe[isbe][jsbe]; asbe[isbe][jsbe]=asbe[i1sbe][j1sbe]; asbe[i1sbe][j1sbe]=xsbe; i1sbe=i1sbe-1;
     		}
-    	n1=n1-1; i1=n; j1=j1-1;
+    	n1sbe=n1sbe-1; i1sbe=nsbe; j1sbe=j1sbe-1;
     	}
     }
     public static void main(String[] args)
-    {   int n;
+    {   int nsbe;
         Scanner sc = new Scanner(System.in);
-        System.out.println("Intro n y m");
-        n=sc.nextInt();
-        llenarm(n);
-        mostrarm(n);
-        intertds(n);
-        mostrarm(n);
+        System.out.println("Intro nsbe y m");
+        nsbe=sc.nextInt();
+        llenarm(nsbe);
+        mostrarm(nsbe);
+        intertds(nsbe);
+        mostrarm(nsbe);
     }
 }

@@ -1,47 +1,47 @@
 package Laboratorios.Lab2;
 import java.util.Scanner;
 public class E7_Caracol {
-    static public int a[][]=new int[10][10];
-    static void mostrarm(int n)
-    { int i, j;
-    System.out.println("\n");
-        for (i=1;i<=n;i++)
-        {	for (j=1;j<=n;j++)
-            {System.out.print("\t"+a[i][j]);
+    static public int asbe[][]=new int[10][10];
+    static void mostrarm(int nsbe)
+    { int isbe, jsbe;
+    System.out.println("\nsbe");
+        for (isbe=1;isbe<=nsbe;isbe++)
+        {	for (jsbe=1;jsbe<=nsbe;jsbe++)
+            {System.out.print("\t"+asbe[isbe][jsbe]);
             }
-        	System.out.println("\n");
+        	System.out.println("\nsbe");
         }
     }
-    static void us(int n)
-    {int i, j, k, c=1, ls;
-    	ls=n;
-    	for (k=1;k<=(n/2);k++)
-    	{	i=k;
-    		for (j=1;j<=ls;j++)
-    		{	a[i][j]=c; c=c+1;
+    static void us(int nsbe)
+    {int isbe, jsbe, ksbe, csbe=1, lssbe;
+    	lssbe=nsbe;
+    	for (ksbe=1;ksbe<=(nsbe/2);ksbe++)
+    	{	isbe=ksbe;
+    		for (jsbe=1;jsbe<=lssbe;jsbe++)
+    		{	asbe[isbe][jsbe]=csbe; csbe=csbe+1;
     		}
-    	j=ls;
-    	for(i=k+1;i<=ls;j++)
-    	{	a[i][j]=c; c=c+1;
+    	jsbe=lssbe;
+    	for(isbe=ksbe+1;isbe<=lssbe;jsbe++)
+    	{	asbe[isbe][jsbe]=csbe; csbe=csbe+1;
     	}
-    	i=ls;
-    	for(j=ls-1;j>=1;j--)
-    	{	a[i][j]=c; c=c+1;
+    	isbe=lssbe;
+    	for(jsbe=lssbe-1;jsbe>=1;jsbe--)
+    	{	asbe[isbe][jsbe]=csbe; csbe=csbe+1;
     	}
-    	ls=ls-1;
+    	lssbe=lssbe-1;
     	}
-    	if(n%2==1)
-    	{	i=(n/2)+1;
-    		for(j=1;j<=(n/2)+1;j++)
-    		{	a[i][j]=c; c=c+1;}
+    	if(nsbe%2==1)
+    	{	isbe=(nsbe/2)+1;
+    		for(jsbe=1;jsbe<=(nsbe/2)+1;jsbe++)
+    		{	asbe[isbe][jsbe]=csbe; csbe=csbe+1;}
     	}
     }
     public static void main(String[] args)
-    {   int n;
+    {   int nsbe;
         Scanner sc = new Scanner(System.in);
-        System.out.println("Intro n");
-        n=sc.nextInt();
-        us(n);
-        mostrarm(n);
+        System.out.println("Intro nsbe");
+        nsbe=sc.nextInt();
+        us(nsbe);
+        mostrarm(nsbe);
     }
 }

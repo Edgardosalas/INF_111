@@ -2,86 +2,86 @@ package Laboratorios.Lab3.E3_Clase_Vector;
 import java.util.Scanner;
 public class Vector {
 			private
-				int nom[]=new int[10];
-				int n;
+				int nomsbe[]=new int[10];
+				int nsbe;
 			public
 				Vector()
-				{	n=1;
-					nom[1]=15;
+				{	nsbe=1;
+					nomsbe[1]=15;
 				}
-				Vector(int a)
-				{	int i;
-					n=a;
-					for(i=1;i<=n;i++)
-					{nom[i]=i;
+				Vector(int asbe)
+				{	int isbe;
+					nsbe=asbe;
+					for(isbe=1;isbe<=nsbe;isbe++)
+					{nomsbe[isbe]=isbe;
 					}
 				}
 				int obtn()
-				{return n;}
-				int obtnom(int k)
-				{return nom[k];}
-				void ponn(int a)
-				{n=a;}
-				void ponnom(int k, int a)
-				{nom[k]=a;}
+				{return nsbe;}
+				int obtnom(int ksbe)
+				{return nomsbe[ksbe];}
+				void ponn(int asbe)
+				{nsbe=asbe;}
+				void ponnom(int ksbe, int asbe)
+				{nomsbe[ksbe]=asbe;}
 				void leer()
-				{	int i;
+				{	int isbe;
 					Scanner sc=new Scanner(System.in);
-					System.out.println("Intro n");
-					n=sc.nextInt();
-	                for (i=1;i<=n;i++)
-	                {System.out.println("nom["+i+"]=");
-	                	nom[i]=sc.nextInt();
+					System.out.println("Intro nsbe");
+					nsbe=sc.nextInt();
+	                for (isbe=1;isbe<=nsbe;isbe++)
+	                {System.out.println("nomsbe["+isbe+"]=");
+	                	nomsbe[isbe]=sc.nextInt();
 	                }
 				}
 				void mostrar()
-				{	int i;
+				{	int isbe;
 					Scanner cs=new Scanner(System.in);
-					System.out.println("\n");
-					for (i=1;i<=n;i++)
-					{	System.out.print(" "+nom[i]);
+					System.out.println("\nsbe");
+					for (isbe=1;isbe<=nsbe;isbe++)
+					{	System.out.print(" "+nomsbe[isbe]);
 					}
 				}
 				void burbuja()
-			    {	int i, j, x;
-			        for (i=1;i<=n-1;i++)
-			            {	for (j=i+1;j<=n;j++)
-			                {	if(nom[i]>nom[j])
-			                    {	x=nom[i]; nom[i]=nom[j];
-			                    	nom[j]=x;
+			    {	int isbe, jsbe, xsbe;
+			        for (isbe=1;isbe<=nsbe-1;isbe++)
+			            {	for (jsbe=isbe+1;jsbe<=nsbe;jsbe++)
+			                {	if(nomsbe[isbe]>nomsbe[jsbe])
+			                    {	xsbe=nomsbe[isbe]; nomsbe[isbe]=nomsbe[jsbe];
+			                    	nomsbe[jsbe]=xsbe;
 			                    }
 			                }
 			            }
 			    }
 			     void insercion()
-			     {	int i, k=0, x;
-			     	for (i=2;i<=n;i++)
-			     	{	k=i;
-			     		while(nom[k]<=nom[k-1] && k>1)
-			     		{	x=nom[k]; nom[k]=nom[k-1]; nom[k-1]=x;
-			     			k=k-1;
+			     {	int isbe, ksbe=0, xsbe;
+			     	for (isbe=2;isbe<=nsbe;isbe++)
+			     	{	ksbe=isbe;
+			     		while(nomsbe[ksbe]<=nomsbe[ksbe-1] && ksbe>1)
+			     		{	xsbe=nomsbe[ksbe]; nomsbe[ksbe]=nomsbe[ksbe-1]; nomsbe[ksbe-1]=xsbe;
+			     			ksbe=ksbe-1;
 			     		}
 			     	}
 			     }
 			     void sacudida()
-			        {int i, k=0, x, sw=1, li=1, ls=n;
-			            while(sw!=0)
-			            {sw=0;
-			                if(k==0)
-			                {	for(i=li;i<=ls-1;i++)
-			                    {if(nom[i]>nom[i+1])
-			                        {x=nom[i]; nom[i]=nom[i+1]; nom[i+1]=x; sw=1;
+			        {int isbe, ksbe=0, xsbe, swsbe=1, lisbe=1, lssbe=nsbe;
+			            while(swsbe!=0)
+			            {swsbe=0;
+			                if(ksbe==0)
+			                {	for(isbe=lisbe;isbe<=lssbe-1;isbe++)
+			                    {if(nomsbe[isbe]>nomsbe[isbe+1])
+			                        {xsbe=nomsbe[isbe]; nomsbe[isbe]=nomsbe[isbe+1]; nomsbe[isbe+1]=xsbe; swsbe=1;
 			                        }
 			                    }
-			                    ls=ls-1; k=1;
+			                    lssbe=lssbe-1; ksbe=1;
 			                }
 			                else
-			                {	for(i=ls;i>=li+1;i--)
-			                    {if(nom[i]<nom[i-1])
-			                        {x=nom[i]; nom[i]=nom[i-1]; nom[i-1]=x; sw=1;
+			                {	for(isbe=lssbe;isbe>=lisbe+1;isbe--)
+			                    {if(nomsbe[isbe]<nomsbe[isbe-1])
+			                        {xsbe=nomsbe[isbe]; nomsbe[isbe]=nomsbe[isbe-1]; nomsbe[isbe-1]=xsbe; swsbe=1;
 			                        }
 			                    }
-			                li=li-1; k=0;
+			                lisbe=lisbe-1; ksbe=0;
 			                }
 			            }
 			        }

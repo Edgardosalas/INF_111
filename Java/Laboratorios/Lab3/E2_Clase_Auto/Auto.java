@@ -2,96 +2,96 @@ package Laboratorios.Lab3.E2_Clase_Auto;
 import java.util.Scanner;
 public class Auto {
 		private
-			String placa;
-			String marca;
-			int año;
-			String tipo;
+			String placasbe;
+			String marcasbe;
+			int añosbe;
+			String tiposbe;
 		public
 			Auto()
-			{	placa="USB-123";
-				marca="Toyota";
-				año=2015;
-				tipo="Vagoneta";
+			{	placasbe="USB-123";
+				marcasbe="Toyota";
+				añosbe=2015;
+				tiposbe="Vagoneta";
 			}
-			Auto(String a, String b, int c, String d)
-			{	placa=a;
-				marca=b;
-				año=c;
-				tipo=d;
+			Auto(String asbe, String bsbe, int csbe, String dsbe)
+			{	placasbe=asbe;
+				marcasbe=bsbe;
+				añosbe=csbe;
+				tiposbe=dsbe;
 			}
-			Auto(int a, String b, String c, String d)
-			{	placa=b;
-				marca=c;
-				año=a;
-				tipo=d;
+			Auto(int asbe, String bsbe, String csbe, String dsbe)
+			{	placasbe=bsbe;
+				marcasbe=csbe;
+				añosbe=asbe;
+				tiposbe=dsbe;
 			}
-			Auto(String a, int b, String c, String d)
-			{	placa=a;
-				marca=c;
-				año=b;
-				tipo=d;
+			Auto(String asbe, int bsbe, String csbe, String dsbe)
+			{	placasbe=asbe;
+				marcasbe=csbe;
+				añosbe=bsbe;
+				tiposbe=dsbe;
 			}
-			Auto(String a, String b, int c)
-			{	placa=a;
-				marca=b;
-				año=c;
-				tipo="Automovil";
+			Auto(String asbe, String bsbe, int csbe)
+			{	placasbe=asbe;
+				marcasbe=bsbe;
+				añosbe=csbe;
+				tiposbe="Automovil";
 			}
-			Auto(String a, String b)
-			{	placa=a;
-				marca=b;
-				año=2021;
-				tipo="Camioneta";
+			Auto(String asbe, String bsbe)
+			{	placasbe=asbe;
+				marcasbe=bsbe;
+				añosbe=2021;
+				tiposbe="Camioneta";
 			}
-			Auto(String a)
-			{	placa=a;
-				marca="VW";
-				año=2021;
-				tipo="Camioneta";
+			Auto(String asbe)
+			{	placasbe=asbe;
+				marcasbe="VW";
+				añosbe=2021;
+				tiposbe="Camioneta";
 			}
-			Auto(int a)
-			{	placa="ABC-321";
-				marca="Suzuki";
-				año=a;
-				tipo="Jeep";
+			Auto(int asbe)
+			{	placasbe="ABC-321";
+				marcasbe="Suzuki";
+				añosbe=asbe;
+				tiposbe="Jeep";
 			}
-			Auto(String a, int b)
-			{	placa=a;
-				marca="Nissan";
-				año=b;
-				tipo="Camioneta";
+			Auto(String asbe, int bsbe)
+			{	placasbe=asbe;
+				marcasbe="Nissan";
+				añosbe=bsbe;
+				tiposbe="Camioneta";
 			}
 			String obtp()
-			{return(placa);}
+			{return(placasbe);}
 			String obtm()
-			{return(marca);}
+			{return(marcasbe);}
 			int obta()
-			{return(año);}
+			{return(añosbe);}
 			String obtt()
-			{return(tipo);}
-			void ponm(String a)
-			{this.marca=a;}
+			{return(tiposbe);}
+			void ponm(String asbe)
+			{this.marcasbe=asbe;}
 			
-			void mismoaño(Auto A)
-			{	if(año==A.obta()) {
-				System.out.println("Tienen el mismo año");
+			void mismoaño(Auto Asbe)
+			{	if(añosbe==Asbe.obta()) {
+				System.out.println("Tienen el mismo añosbe");
 				}
 				else {
-					System.out.println("Tienen distinto año");
+					System.out.println("Tienen distinto añosbe");
 					}
 			}
 			void leer()
 			{Scanner sc=new Scanner(System.in);
 			 System.out.println("Intro Placa");
-			 placa=sc.next();
+			 placasbe=sc.next();
 			 System.out.println("Intro Marca");
-			 marca=sc.next();
-			 System.out.println("Intro año");
-			 año=sc.nextInt();
-			 System.out.println("Intro tipo");
-			 tipo=sc.next();
+			 marcasbe=sc.next();
+			 System.out.println("Intro añosbe");
+			 añosbe=sc.nextInt();
+			 System.out.println("Intro tiposbe");
+			 tiposbe=sc.next();
 			}
 			void mostrar()
-			{System.out.println(" "+placa+" "+marca+" "+año+" "+tipo);
+			{System.out.println(" "+placasbe+" "+marcasbe+" "+añosbe+" "+tiposbe);
 			}
 		}

@@ -1,60 +1,60 @@
 package Laboratorios.Lab1;
 import java.util.Scanner;
 public class E8_Invertir_palabras {
-    static public String a[]=new String[20];
-    static public void mostrarv(int t)
-    { int i;
+    static public String asbe[]=new String[20];
+    static public void mostrarv(int tsbe)
+    { int isbe;
         System.out.println("");
-        for (i=1;i<=t;i++)
+        for (isbe=1;isbe<=tsbe;isbe++)
         {
-            System.out.print(" "+ a[i]);
+            System.out.print(" "+ asbe[isbe]);
         }
     }
-    static int contarpal(String w)
-    {int cp=0, lon,i; String y; w=w+" ";
-    	lon=w.length();
-    	for (i=1;i<=lon;i++)
-    	{	y=w.substring(i-1,i);
-    		if(y.compareTo(" ")==0) {cp=cp+1;}
+    static int contarpal(String wsbe)
+    {int cpsbe=0, lonsbe,isbe; String ysbe; wsbe=wsbe+" ";
+    	lonsbe=wsbe.length();
+    	for (isbe=1;isbe<=lonsbe;isbe++)
+    	{	ysbe=wsbe.substring(isbe-1,isbe);
+    		if(ysbe.compareTo(" ")==0) {cpsbe=cpsbe+1;}
     	}
-    	return cp;
+    	return cpsbe;
     }
-    static String sacarpal(String w, int k)
-    {int cp=0,lon,i; String y,v="",z=""; w=w+" ";
-    	lon=w.length();
-    	for (i=1;i<=lon;i++)
-    	{	y=w.substring(i-1,i);
-    		if(y.compareTo(" ")==0)
-    		{cp=cp+1;
-    			if(cp==k) {z=v;}
-    			v="";
+    static String sacarpal(String wsbe, int ksbe)
+    {int cpsbe=0,lonsbe,isbe; String ysbe,vsbe="",zsbe=""; wsbe=wsbe+" ";
+    	lonsbe=wsbe.length();
+    	for (isbe=1;isbe<=lonsbe;isbe++)
+    	{	ysbe=wsbe.substring(isbe-1,isbe);
+    		if(ysbe.compareTo(" ")==0)
+    		{cpsbe=cpsbe+1;
+    			if(cpsbe==ksbe) {zsbe=vsbe;}
+    			vsbe="";
     		}
     		else
-    		{v=v+y;}
+    		{vsbe=vsbe+ysbe;}
     	}
-    	return z;
+    	return zsbe;
     }
-    static String invertir(String w)
-    {int i, ele;
-    	String v,y; v="";
-    	ele=w.length();
-    	for(i=1;i<=ele;i++)
-    	{y=w.substring(i-1,i);
-    	v=y+v;}
-    	return v;
+    static String invertir(String wsbe)
+    {int isbe, elesbe;
+    	String vsbe,ysbe; vsbe="";
+    	elesbe=wsbe.length();
+    	for(isbe=1;isbe<=elesbe;isbe++)
+    	{ysbe=wsbe.substring(isbe-1,isbe);
+    	vsbe=ysbe+vsbe;}
+    	return vsbe;
     }
     public static void main(String[] args)
-    {   int cp, i;
-    	String b;
+    {   int cpsbe, isbe;
+    	String bsbe;
         Scanner sc = new Scanner(System.in);
         System.out.println("Intro una cadena");
-        b=sc.nextLine();
-        cp=contarpal(b);
-        for (i=1;i<=cp;i++)
-        {	a[i]=sacarpal(b,i);}
-        mostrarv(cp);
-        for (i=1;i<=cp;i++)
-        {a[i]=invertir(a[i]);}
-        mostrarv(cp);
+        bsbe=sc.nextLine();
+        cpsbe=contarpal(bsbe);
+        for (isbe=1;isbe<=cpsbe;isbe++)
+        {	asbe[isbe]=sacarpal(bsbe,isbe);}
+        mostrarv(cpsbe);
+        for (isbe=1;isbe<=cpsbe;isbe++)
+        {asbe[isbe]=invertir(asbe[isbe]);}
+        mostrarv(cpsbe);
     }
 }

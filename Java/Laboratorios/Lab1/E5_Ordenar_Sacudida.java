@@ -1,56 +1,56 @@
 package Laboratorios.Lab1;
 import java.util.Scanner;
 public class E5_Ordenar_Sacudida {
-        static public int a[]=new int[20];
-        static public void llenarv(int t)
-        {int i;
+        static public int asbe[]=new int[20];
+        static public void llenarv(int tsbe)
+        {int isbe;
             Scanner sc = new Scanner(System.in);
-                for (i=1;i<=t;i++)
+                for (isbe=1;isbe<=tsbe;isbe++)
                 {
-                    System.out.println(" a["+i+"]=");
-                    a[i]=sc.nextInt();
+                    System.out.println(" asbe["+isbe+"]=");
+                    asbe[isbe]=sc.nextInt();
                 }
             }
-        static public void mostrarv(int t)
-        { int i;
+        static public void mostrarv(int tsbe)
+        { int isbe;
             System.out.println("");
-            for (i=1;i<=t;i++)
+            for (isbe=1;isbe<=tsbe;isbe++)
             {
-                System.out.print(" "+ a[i]);
+                System.out.print(" "+ asbe[isbe]);
             }
         }
-        static void sacudida(int t)
-        {int i, x=0, sw=1, li=1, ls=t, k=0;
-            while(sw!=0)
-            {sw=0;
-                if(k==0)
-                {	for(i=li;i<=ls-1;i++)
-                    {if(a[i]>a[i+1])
-                        {x=a[i]; a[i]=a[i+1]; a[i+1]=x; sw=1;
+        static void sacudida(int tsbe)
+        {int isbe, xsbe=0, swsbe=1, lisbe=1, lssbe=tsbe, ksbe=0;
+            while(swsbe!=0)
+            {swsbe=0;
+                if(ksbe==0)
+                {	for(isbe=lisbe;isbe<=lssbe-1;isbe++)
+                    {if(asbe[isbe]>asbe[isbe+1])
+                        {xsbe=asbe[isbe]; asbe[isbe]=asbe[isbe+1]; asbe[isbe+1]=xsbe; swsbe=1;
                         }
                     }
-                    ls=ls-1; k=1;
+                    lssbe=lssbe-1; ksbe=1;
                 }
                 else
-                {	for(i=ls;i>=li+1;i--)
-                    {if(a[i]<a[i-1])
-                        {x=a[i]; a[i]=a[i-1]; a[i-1]=x; sw=1;
+                {	for(isbe=lssbe;isbe>=lisbe+1;isbe--)
+                    {if(asbe[isbe]<asbe[isbe-1])
+                        {xsbe=asbe[isbe]; asbe[isbe]=asbe[isbe-1]; asbe[isbe-1]=xsbe; swsbe=1;
                         }
                     }
-                li=li-1; k=0;
+                lisbe=lisbe-1; ksbe=0;
                 }
             }
         }
         public static void main(String[] args)
-        {   int n;
+        {   int nsbe;
             Scanner sc = new Scanner(System.in);
             do
-            {   System.out.println("intro n");
-                n=sc.nextInt();
-            }while (n>20);
-            llenarv(n);
-            mostrarv(n);
-            sacudida(n);
-            mostrarv(n);
+            {   System.out.println("intro nsbe");
+                nsbe=sc.nextInt();
+            }while (nsbe>20);
+            llenarv(nsbe);
+            mostrarv(nsbe);
+            sacudida(nsbe);
+            mostrarv(nsbe);
         }
     }

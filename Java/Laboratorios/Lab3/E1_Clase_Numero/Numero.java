@@ -2,53 +2,53 @@ package Laboratorios.Lab3.E1_Clase_Numero;
 import java.util.Scanner;
 public class Numero {
 	private
-		int num;
+		int numsbe;
 	public
 		void leer()
 		{Scanner sc=new Scanner(System.in);
-		 System.out.println("num:");
-		 num=sc.nextInt();
+		 System.out.println("numsbe:");
+		 numsbe=sc.nextInt();
 		}
 		void mostrar()
-		{System.out.println(" "+num);
+		{System.out.println(" "+numsbe);
 		}
 		void sumardig()
-		{int d, s=0, n=num;
-		 while(n!=0)
-		 {d=n%10;
-		  n=n/10;
-		  s=s+d;
+		{int dsbe, ssbe=0, nsbe=numsbe;
+		 while(nsbe!=0)
+		 {dsbe=nsbe%10;
+		  nsbe=nsbe/10;
+		  ssbe=ssbe+dsbe;
 		 }
-		 System.out.println("suma dig="+s);
+		 System.out.println("suma dig="+ssbe);
 		}
 		int MayDig()
-		{int d, may=0, n=num;
-		 while(n!=0)
-		 {d=n%10;
-		  n=n/10;
-		  if(d>may) {may=d;}
+		{int dsbe, maysbe=0, nsbe=numsbe;
+		 while(nsbe!=0)
+		 {dsbe=nsbe%10;
+		  nsbe=nsbe/10;
+		  if(dsbe>maysbe) {maysbe=dsbe;}
 		 }
-		 return may;
+		 return maysbe;
 		}
 		int MenDig()
-		{int d, men=9, n=num;
-			while(n!=0)
-			{d=n%10;
-			 n=n/10;
-			 if(d<men) {men=d;}
+		{int dsbe, mensbe=9, nsbe=numsbe;
+			while(nsbe!=0)
+			{dsbe=nsbe%10;
+			 nsbe=nsbe/10;
+			 if(dsbe<mensbe) {mensbe=dsbe;}
 			}
-			return men;
+			return mensbe;
 		}
 		void EliDigCen()
-		{int a,b,c,n,cd,d, k=0, p=0;
-		 n=num;
-		 cd=(int)Math.log10(n)+1;
-		 if(cd%2==0) {p=(cd/2)-1; k=2;}
-		 else {p=(cd/2); k=1;}
-		 b=n%(int)Math.pow(10,p);
-		 n=n/(int)Math.pow(10,p);
-		 a=n/(int)Math.pow(10,k);
-		 c=a*(int)Math.pow(10,p)+b;
-		 System.out.println("Sin centro="+c);
+		{int asbe,bsbe,csbe,nsbe,cssbe,dsbe, ksbe=0, psbe=0;
+		 nsbe=numsbe;
+		 cssbe=(int)Math.log10(nsbe)+1;
+		 if(cssbe%2==0) {psbe=(cssbe/2)-1; ksbe=2;}
+		 else {psbe=(cssbe/2); ksbe=1;}
+		 bsbe=nsbe%(int)Math.pow(10,psbe);
+		 nsbe=nsbe/(int)Math.pow(10,psbe);
+		 asbe=nsbe/(int)Math.pow(10,ksbe);
+		 csbe=asbe*(int)Math.pow(10,psbe)+bsbe;
+		 System.out.println("Sin centro="+csbe);
 		}
 }

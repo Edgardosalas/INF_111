@@ -1,49 +1,49 @@
 package Laboratorios.Lab2;
 import java.util.Scanner;
 public class E2_Buscar_Menor {
-    static public int a[][]=new int[10][10];
-    static public int b[]=new int[10];
-    static public int pi, pj;
-    static void llenarm(int n, int m)
-    { int i, j;
+    static public int asbe[][]=new int[10][10];
+    static public int bsbe[]=new int[10];
+    static public int pisbe, pjsbe;
+    static void llenarm(int nsbe, int msbe)
+    { int isbe, jsbe;
     	Scanner sc = new Scanner(System.in);
-        for (i=1;i<=n;i++)
-        {	for (j=1;j<=m;j++)
-            {System.out.println("a["+i+"]["+j+"]=");
-            	a[i][j]=sc.nextInt();
+        for (isbe=1;isbe<=nsbe;isbe++)
+        {	for (jsbe=1;jsbe<=msbe;jsbe++)
+            {System.out.println("asbe["+isbe+"]["+jsbe+"]=");
+            	asbe[isbe][jsbe]=sc.nextInt();
             }
         }
     }
-    static void mostrarm(int n, int m)
-    { int i, j;
+    static void mostrarm(int nsbe, int msbe)
+    { int isbe, jsbe;
     System.out.println("\n");
-        for (i=1;i<=n;i++)
-        {	for (j=1;j<=m;j++)
-            {System.out.print("\t"+a[i][j]);
+        for (isbe=1;isbe<=nsbe;isbe++)
+        {	for (jsbe=1;jsbe<=msbe;jsbe++)
+            {System.out.print("\t"+asbe[isbe][jsbe]);
             }
         	System.out.println("\n");
         }
     }
-    static void menor (int n, int m)
-    {int i, j,men=9999;
-    	for (i=1;i<=n;i++)
-    	{	for (j=1;j<=m;j++)
-    		{if (a[i][j]<men)
-    			{men=a[i][j];
-    				pi=i; pj=j;
+    static void menor (int nsbe, int msbe)
+    {int isbe, jsbe,mensbe=9999;
+    	for (isbe=1;isbe<=nsbe;isbe++)
+    	{	for (jsbe=1;jsbe<=msbe;jsbe++)
+    		{if (asbe[isbe][jsbe]<mensbe)
+    			{mensbe=asbe[isbe][jsbe];
+    				pisbe=isbe; pjsbe=jsbe;
     			}
     		}
     	}
     }
     public static void main(String[] args)
-    {   int n,m;
+    {   int nsbe,msbe;
         Scanner sc = new Scanner(System.in);
-        System.out.println("Intro n y m");
-        n=sc.nextInt();
-        m=sc.nextInt();
-        llenarm(n,m);
-        mostrarm(n,m);
-        menor(n,m);
-        System.out.println("menor="+a[pi][pj]);
+        System.out.println("Intro nsbe y msbe");
+        nsbe=sc.nextInt();
+        msbe=sc.nextInt();
+        llenarm(nsbe,msbe);
+        mostrarm(nsbe,msbe);
+        menor(nsbe,msbe);
+        System.out.println("menor="+asbe[pisbe][pjsbe]);
     }
 }

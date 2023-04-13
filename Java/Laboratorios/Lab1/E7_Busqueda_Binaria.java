@@ -1,61 +1,61 @@
 package Laboratorios.Lab1;
 import java.util.Scanner;
 public class E7_Busqueda_Binaria {
-    static public int a[]=new int[20];
-    static public void llenarv(int t)
-    {int i;
+    static public int asbe[]=new int[20];
+    static public void llenarv(int tsbe)
+    {int isbe;
         Scanner sc = new Scanner(System.in);
-            for (i=1;i<=t;i++)
+            for (isbe=1;isbe<=tsbe;isbe++)
             {
-                System.out.println(" a["+i+"]=");
-                a[i]=sc.nextInt();
+                System.out.println(" asbe["+isbe+"]=");
+                asbe[isbe]=sc.nextInt();
             }
         }
-    static public void mostrarv(int t)
-    { int i;
+    static public void mostrarv(int tsbe)
+    { int isbe;
         System.out.println("");
-        for (i=1;i<=t;i++)
+        for (isbe=1;isbe<=tsbe;isbe++)
         {
-            System.out.print(" "+ a[i]);
+            System.out.print(" "+ asbe[isbe]);
         }
     }
-    static void burbuja(int t)
-    {int i, j, x=0;
-        for (i=1;i<=t-1;i++)
-        {	for (j=i+1;j<=t;j++)
-            {	if(a[i]>a[j])
-                {	x=a[j]; a[j]=a[i]; a[i]=x;
+    static void burbuja(int tsbe)
+    {int isbe, jsbe, xsbe=0;
+        for (isbe=1;isbe<=tsbe-1;isbe++)
+        {	for (jsbe=isbe+1;jsbe<=tsbe;jsbe++)
+            {	if(asbe[isbe]>asbe[jsbe])
+                {	xsbe=asbe[jsbe]; asbe[jsbe]=asbe[isbe]; asbe[isbe]=xsbe;
                 }
             }
         }
     }
-    static int busbin(int t, int x)
-    {int lc, k=1, li=1, ls=t;
-    	lc=(li+ls)/2;
-    	while (x!=a[lc] && li<=ls)
-    	{	if (x>a[lc]) {li=lc+1;}
-    		else { ls=lc-1; }
-    		lc=(li+ls/2);
+    static int busbin(int tsbe, int xsbe)
+    {int lcsbe, ksbe=1, lisbe=1, lssbe=tsbe;
+    	lcsbe=(lisbe+lssbe)/2;
+    	while (xsbe!=asbe[lcsbe] && lisbe<=lssbe)
+    	{	if (xsbe>asbe[lcsbe]) {lisbe=lcsbe+1;}
+    		else { lssbe=lcsbe-1; }
+    		lcsbe=(lisbe+lssbe/2);
     	}
-    	if(x==a[lc]) {k=lc;}
-    	else { k=-1; }
-    	return k;
+    	if(xsbe==asbe[lcsbe]) {ksbe=lcsbe;}
+    	else { ksbe=-1; }
+    	return ksbe;
     }
     public static void main(String[] args)
-    {   int n, z;
+    {   int nsbe, zsbe;
         Scanner sc = new Scanner(System.in);
         do
-        {   System.out.println("intro n");
-            n=sc.nextInt();
-        }while (n>20);
-        llenarv(n);
-        mostrarv(n);
-        burbuja(n);
-        mostrarv(n);
-        System.out.println("\nintro elem a buscar ");
-        z=sc.nextInt();
-        if (busbin(n,z)!= -1)
-        {System.out.println("\n "+z+" esta en posi "+busbin(n,z));}
+        {   System.out.println("intro nsbe");
+            nsbe=sc.nextInt();
+        }while (nsbe>20);
+        llenarv(nsbe);
+        mostrarv(nsbe);
+        burbuja(nsbe);
+        mostrarv(nsbe);
+        System.out.println("\nintro elem asbe buscar ");
+        zsbe=sc.nextInt();
+        if (busbin(nsbe,zsbe)!= -1)
+        {System.out.println("\n "+zsbe+" esta en posi "+busbin(nsbe,zsbe));}
         else
         {System.out.println(" \nno existe ");}
     }

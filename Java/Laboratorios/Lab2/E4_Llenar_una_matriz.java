@@ -1,34 +1,34 @@
 package Laboratorios.Lab2;
 import java.util.Scanner;
 public class E4_Llenar_una_matriz {
-    static public int a[][]=new int[10][10];
-    static void llenar1(int n, int m)
-    { int i, j, c=1;
-        for (i=1;i<=n;i++)
-        {	for (j=1;j<=m;j++)
-            {System.out.println("a["+i+"]["+j+"]=");
-            	a[i][j]=c; c=c+1;
+    static public int asbe[][]=new int[10][10];
+    static void llenar1(int nsbe, int msbe)
+    { int isbe, jsbe, csbe=1;
+        for (isbe=1;isbe<=nsbe;isbe++)
+        {	for (jsbe=1;jsbe<=msbe;jsbe++)
+            {System.out.println("asbe["+isbe+"]["+jsbe+"]=");
+            	asbe[isbe][jsbe]=csbe; csbe=csbe+1;
             }
         }
     }
-    static void mostrarm(int n, int m)
-    { int i, j;
-    System.out.println("\n");
-        for (i=1;i<=n;i++)
-        {	for (j=1;j<=m;j++)
-            {System.out.print("\t"+a[i][j]);
+    static void mostrarm(int nsbe, int msbe)
+    { int isbe, jsbe;
+    System.out.println("\nsbe");
+        for (isbe=1;isbe<=nsbe;isbe++)
+        {	for (jsbe=1;jsbe<=msbe;jsbe++)
+            {System.out.print("\t"+asbe[isbe][jsbe]);
             }
-        	System.out.println("\n");
+        	System.out.println("\nsbe");
         }
     }
 
     public static void main(String[] args)
-    {   int n,m;
+    {   int nsbe,msbe;
         Scanner sc = new Scanner(System.in);
-        System.out.println("Intro n y m");
-        n=sc.nextInt();
-        m=sc.nextInt();
-        llenar1(n,m);
-        mostrarm(n,m);
+        System.out.println("Intro nsbe y msbe");
+        nsbe=sc.nextInt();
+        msbe=sc.nextInt();
+        llenar1(nsbe,msbe);
+        mostrarm(nsbe,msbe);
     }
 }
