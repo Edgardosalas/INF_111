@@ -46,7 +46,7 @@ public class Matriz {
 			isbe=lisbe-1;
 			for(jsbe=lisbe;jsbe<=lssbe+1;jsbe++)
 			{esbe[isbe][jsbe]=csbe;csbe=csbe+1;}
-			lisbe=lisbe+1; lssbe=lssbe+1;
+			lisbe=lisbe-1; lssbe=lssbe+1;
 		}
 	}
 	void rombo(int nsbe)
