@@ -3,84 +3,89 @@ package Laboratorios.Lab4.E1_Matriz;
 public class Matriz {
 	private
 	int esbe[][]=new int[10][10];
-	int nsbe;
+	int n;
 	public
 	Matriz()
-	{nsbe=1;
-		esbe[nsbe][nsbe]=15;
+	{n=1;
+		esbe[n][n]=15;
 	}
 	Matriz(int asbe)
-	{int isbe, jsbe;
-		nsbe=asbe;
-		for(isbe=1;isbe<=nsbe;isbe++)
-		{	for(jsbe=1;jsbe<=nsbe;jsbe++)
-			{esbe[isbe][jsbe]=isbe+jsbe;
+	{int i, j;
+		n=asbe;
+		for(i=1;i<=n;i++)
+		{	for(j=1;j<=n;j++)
+			{esbe[i][j]=i+j;
 			}
 		}
 	}
-	void mostrarm (int nsbe)
-	{int isbe,jsbe;
-		System.out.println("\nsbe");
-		for(isbe=1;isbe<=nsbe;isbe++)
-		{	for(jsbe=1;jsbe<=nsbe;jsbe++)
+	void mostrarm (int n)
+	{int i,j;
+		System.out.println("\n");
+		for(i=1;i<=n;i++)
+		{	for(j=1;j<=n;j++)
 			{
-				System.out.print("\t"+esbe[isbe][jsbe]);
+				System.out.print("\t"+esbe[i][j]);
 			}
-			System.out.println("\nsbe");
+			System.out.println("\n");
 		}
 	}
-	void caracolcentro(int nsbe)
-	{	int isbe,jsbe,psbe,ksbe,csbe=1,lisbe,lssbe;
-		psbe=(nsbe/2)+1; lisbe=psbe; lssbe=psbe;
-		esbe[psbe][psbe]=csbe;csbe++;
-		for(ksbe=1;ksbe<=psbe-1;ksbe++)
-		{	jsbe=lssbe+1;
-			for(isbe=lisbe;isbe<=lssbe+1;isbe++)
-			{esbe[isbe][jsbe]=csbe; csbe=csbe+1;}
-			isbe=lssbe+1;
-			for(jsbe=lssbe;jsbe>=lisbe-1;jsbe--)
-			{esbe[isbe][jsbe]=csbe;csbe=csbe+1;}
-			jsbe=lisbe-1;
-			for(isbe=lssbe;isbe>=lisbe-1;isbe--)
-			{esbe[isbe][jsbe]=csbe;csbe=csbe+1;}
-			isbe=lisbe-1;
-			for(jsbe=lisbe;jsbe<=lssbe+1;jsbe++)
-			{esbe[isbe][jsbe]=csbe;csbe=csbe+1;}
-			lisbe=lisbe-1; lssbe=lssbe+1;
+	void caracolcentro(int n)
+	{	int i,j,psbe,k,c=1,li,ls;
+		psbe=(n/2)+1; li=psbe; ls=psbe;
+		esbe[psbe][psbe]=c;c++;
+		for(k=1;k<=psbe-1;k++)
+		{	j=ls+1;
+			for(i=li;i<=ls+1;i++)
+			{esbe[i][j]=c; c=c+1;}
+			i=ls+1;
+			for(j=ls;j>=li-1;j--)
+			{esbe[i][j]=c;c=c+1;}
+			j=li-1;
+			for(i=ls;i>=li-1;i--)
+			{esbe[i][j]=c;c=c+1;}
+			i=li-1;
+			for(j=li;j<=ls+1;j++)
+			{esbe[i][j]=c;c=c+1;}
+			li=li-1; ls=ls+1;
 		}
 	}
-	void rombo(int nsbe)
-	{int isbe,jsbe,csbe=1,lisbe,lssbe;
-		lisbe=(nsbe/2)+1; lssbe=lisbe;
-		for(isbe=1;isbe<=nsbe;isbe++)
-		{	for(jsbe=lisbe;jsbe<=lssbe;jsbe++)
-			{esbe[isbe][jsbe]=csbe; csbe=csbe+1;
+	void rombo(int n)
+	{int i,j,c=1,li,ls;
+		li=(n/2)+1; ls=li;
+		for(i=1;i<=n;i++)
+		{	for(j=li;j<=ls;j++)
+			{esbe[i][j]=c; c=c+1;
 			}
-		if(isbe>=(nsbe/2)+1)
-		{lisbe=lisbe+1;}
+		if(i>=(n/2)+1)
+		{li=li+1; ls=ls-1;}
 		else
-		{lisbe=lisbe-1;}
+		{li=li-1; ls=ls+1;}
 		}
 	}
-	void zic(int nsbe)
-	{int csbe=1,ksbe,isbe,jsbe;
-		for(ksbe=1;ksbe<=nsbe;ksbe++)
-			{if(ksbe%2==1)
-				{jsbe=ksbe;
-					for(isbe=1;isbe<=ksbe;isbe++)
-					{esbe[isbe][jsbe]=csbe;csbe=csbe++;jsbe--;}
+	void zic(int n)
+	{int c=1,k,i,j;
+		for(k=1;k<=n;k++)
+			{if(k%2==1)
+				{j=k;
+					for(i=1;i<=k;i++)
+					{esbe[i][j]=c;c++;j--;}
 				}
 			else
-				{isbe=ksbe;
-					for(jsbe=1;jsbe<=ksbe;jsbe++)
-					{esbe[isbe][jsbe]=csbe;csbe++;isbe--;}
+				{i=k;
+					for(j=1;j<=k;j++)
+					{esbe[i][j]=c;c++;i--;}
 				}
 			}
-		for(ksbe=2;ksbe<=nsbe;ksbe++)
-		{if(ksbe%2==1)
-			{jsbe=nsbe;
-				for(isbe=ksbe;isbe<=nsbe;isbe++)
-				{esbe[isbe][jsbe]=csbe;csbe++;isbe--;}
+		for(k=2;k<=n;k++)
+		{if(k%2==1)
+			{j=n;
+				for(i=k;i<=n;i++)
+				{esbe[i][j]=c;c++;j--;}
+			}
+			else
+			{	i=n;
+				for(j=k;j<=n;j++)
+					{esbe[i][j]=c; c++; i--;}
 			}
 		}
 	}

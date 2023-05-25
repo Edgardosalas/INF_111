@@ -3,7 +3,7 @@ package Laboratorios.Lab7.E1;
 interface Actor_I
 {}
 interface Transporte_I
-{}
+{}  //Las interfaces deben ir aparte y cada una con sus propios metodos, cada interfaz con un programa propio
 abstract class Persona_CA implements Actor_I
 {
     protected
