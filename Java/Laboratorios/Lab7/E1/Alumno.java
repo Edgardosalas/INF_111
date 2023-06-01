@@ -2,22 +2,22 @@ package Laboratorios.Lab7.E1;
 
 public class Alumno extends Persona_CA {
     private
-    int matricula;
+    int matriculasbe;
     public
     Alumno()
     {
-        matricula=123;
+        matriculasbe=123;
     }
-    Alumno(int a)
+    Alumno(int asbe)
     {
-        matricula=a;
+        matriculasbe=asbe;
     }
     Alumno(int a, String b, int c, int d)
     {
         super.ponci(a);
         super.ponnom(b);
         super.ponfec(c);
-        matricula=d;
+        matriculasbe=d;
     }
     public int edad()
     {return 2020-super.obtfec();}
@@ -28,6 +28,6 @@ public class Alumno extends Persona_CA {
     void ponfec(int a)
     {super.ponfec(a);}
     void mostrar()
-    {System.out.println(" "+super.obtci()+" "+super.obtnom()+" "+super.obtfec()+" "+matricula);
+    {System.out.println(" "+super.obtci()+" "+super.obtnom()+" "+super.obtfec()+" "+matriculasbe);
     }
 }

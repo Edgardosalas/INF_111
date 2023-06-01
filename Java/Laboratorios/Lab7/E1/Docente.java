@@ -2,26 +2,26 @@ package Laboratorios.Lab7.E1;
 
 public class Docente extends Persona_CA {
     private
-    int item;
-    String especialidad;
+    int itemsbe;
+    String especialidadsbe;
     public
     Docente()
     {
-        item=2468;
-        especialidad="sistemas";
+        itemsbe=2468;
+        especialidadsbe="sistemas";
     }
     Docente(int a, String b)
     {
-        item=a;
-        especialidad=b;
+        itemsbe=a;
+        especialidadsbe=b;
     }
     Docente(int a, String b, int c, int d, String e)
     {
         super.ponci(a);
         super.ponnom(b);
         super.ponfec(c);
-        item=d;
-        especialidad=e;
+        itemsbe=d;
+        especialidadsbe=e;
     }
     public int edad()
     {return 2020-super.obtfec();}
@@ -33,6 +33,6 @@ public class Docente extends Persona_CA {
     {super.ponfec(a);}
     void mostrar()
     {
-        System.out.println(" "+super.obtci()+" "+super.obtnom()+" "+super.obtfec()+" "+item+" "+especialidad);
+        System.out.println(" "+super.obtci()+" "+super.obtnom()+" "+super.obtfec()+" "+itemsbe+" "+especialidadsbe);
     }
 }

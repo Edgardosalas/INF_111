@@ -2,32 +2,32 @@ package Laboratorios.Lab8.E2;
 
 public class Cliente {
     private
-    String nombre;
-    String apellido;
-    Tarjeta tar=new Tarjeta();
+    String nombresbe;
+    String apellidosbe;
+    Tarjeta tarsbe=new Tarjeta();
     public
     Cliente()
     {
-        nombre="Pedro";
-        apellido="Quispe";
-        tar=new Tarjeta();
+        nombresbe="Pedro";
+        apellidosbe="Quispe";
+        tarsbe=new Tarjeta();
     }
     Cliente(String a, String b)
     {
-        nombre=a;
-        apellido=b;
-        tar=new Tarjeta();
+        nombresbe=a;
+        apellidosbe=b;
+        tarsbe=new Tarjeta();
     }
     String obtn()
-    {return nombre;}
+    {return nombresbe;}
     String obta()
-    {return apellido;}
+    {return apellidosbe;}
     Tarjeta obtt()
-    {return tar;}
+    {return tarsbe;}
     void ponn(String a)
-    {nombre=a;}
+    {nombresbe=a;}
     void pona(String a)
-    {apellido=a;}
+    {apellidosbe=a;}
     void pont(Tarjeta T)
     {
         T.ponn(T.obtn());
@@ -36,14 +36,14 @@ public class Cliente {
     }
     void leer()
     {
-        nombre=Leer.dato();
-        apellido=Leer.dato();
-        tar.leer();
+        nombresbe=Leer.dato();
+        apellidosbe=Leer.dato();
+        tarsbe.leer();
     }
     void mostrar()
     {
         System.out.println("\n*********Cliente********");
-        System.out.println("\t"+nombre+"\t"+apellido);
-        tar.mostrar();
+        System.out.println("\t"+nombresbe+"\t"+apellidosbe);
+        tarsbe.mostrar();
     }
 }

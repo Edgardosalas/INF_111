@@ -8,20 +8,20 @@ import java.io.IOException;
 
 public class ArchiAlumno {
 	private
-	  String nomarch="";
+	  String nomarchsbe="";
 	 public
 	  ArchiAlumno()
-	  { nomarch="";
+	  { nomarchsbe="";
 	  }
 	  ArchiAlumno(String x)
-	  { nomarch=x;
+	  { nomarchsbe=x;
 	  }
 	  void adicionar(int a,String b, String c, int d, int e) throws IOException
 	  { 
 	   DataOutputStream Archi = null;
 	   try
 	   {
-	    Archi = new DataOutputStream( new FileOutputStream("../"+nomarch,true));
+	    Archi = new DataOutputStream( new FileOutputStream("../"+nomarchsbe,true));
 	    Archi.writeInt(a);
 	    Archi.writeUTF(b);
 	    Archi.writeUTF(c);
@@ -39,7 +39,7 @@ public class ArchiAlumno {
 	   //double promedio=0; //promedio edad
 	   try
 	   { //Alumno A = new Alumno();
-	    Archi = new DataInputStream( new FileInputStream("../"+nomarch) );
+	    Archi = new DataInputStream( new FileInputStream("../"+nomarchsbe) );
 	    System.out.println("COD\t PATERNO \tNOMBRE \tEDAD \tSEXO");
 	    while (true)
 	    {   Alumno A = new Alumno();
@@ -60,7 +60,7 @@ public class ArchiAlumno {
 	   DataInputStream Archi = null;
 	   try
 	   {
-	    Archi = new DataInputStream( new FileInputStream("../"+nomarch) );
+	    Archi = new DataInputStream( new FileInputStream("../"+nomarchsbe) );
 	    System.out.println("COD\t PATERNO \tNOMBRE \tEDAD \tSEXO");
 	    while (true)
 	    { Alumno A = new Alumno();
@@ -84,7 +84,7 @@ public class ArchiAlumno {
 	   DataInputStream Archi = null;
 	   try
 	   {
-	    Archi = new DataInputStream( new FileInputStream("../"+nomarch) );
+	    Archi = new DataInputStream( new FileInputStream("../"+nomarchsbe) );
 	    System.out.println("COD\t PATERNO \tNOMBRE \tEDAD \tSEXO");
 	    while (true)
 	    {
@@ -110,7 +110,7 @@ public class ArchiAlumno {
 	   DataOutputStream ArchiTemp = null;
 	   try
 	   { ArchiTemp = new DataOutputStream( new FileOutputStream("../temporal.dat",true ) );
-	    Archi = new DataInputStream( new FileInputStream("../"+nomarch) );
+	    Archi = new DataInputStream( new FileInputStream("../"+nomarchsbe) );
 	    
 	    while (true)
 	    {
@@ -137,7 +137,7 @@ public class ArchiAlumno {
 	   {
 	    Archi.close();
 	    ArchiTemp.close();
-	    File file1 = new File("../"+nomarch);
+	    File file1 = new File("../"+nomarchsbe);
 	    File file2 = new File("../temporal.dat");
 	    if (file1.exists()){  file1.delete();}
 	    file2.renameTo(file1);
@@ -155,7 +155,7 @@ public class ArchiAlumno {
 	   //double promedio=0; //promedio edad
 	   try
 	   { //Alumno A = new Alumno();
-	    Archi = new DataInputStream( new FileInputStream("../"+nomarch) );
+	    Archi = new DataInputStream( new FileInputStream("../"+nomarchsbe) );
 	    while (true)
 	    {   Alumno A = new Alumno();
 	     A.ponercoda(Archi.readInt());
@@ -177,7 +177,7 @@ public class ArchiAlumno {
 	   DataInputStream Archi = null;
 	   try
 	   {
-	    Archi = new DataInputStream( new FileInputStream("../"+nomarch) );
+	    Archi = new DataInputStream( new FileInputStream("../"+nomarchsbe) );
 	    System.out.println("COD\t PATERNO \tNOMBRE \tEDAD \tSEXO");
 	    while (true)
 	    {
@@ -205,7 +205,7 @@ public class ArchiAlumno {
 	   var=muj=c1=c2=0;
 	   try
 	   {
-	    Archi = new DataInputStream( new FileInputStream("../"+nomarch) );
+	    Archi = new DataInputStream( new FileInputStream("../"+nomarchsbe) );
 	    System.out.println();
 	    while (true)
 	    {
@@ -240,7 +240,7 @@ public class ArchiAlumno {
 	   cont=0;
 	   try
 	   {
-	    Archi = new DataInputStream( new FileInputStream("../"+nomarch) );
+	    Archi = new DataInputStream( new FileInputStream("../"+nomarchsbe) );
 	    while (true)
 	    {
 	     Alumno A = new Alumno();
@@ -261,7 +261,7 @@ public class ArchiAlumno {
 	   int i=1;
 	   try
 	   {
-	    Archi = new DataInputStream( new FileInputStream("../"+nomarch) );
+	    Archi = new DataInputStream( new FileInputStream("../"+nomarchsbe) );
 	    while (true)
 	    {
 	     Alumno A = new Alumno();

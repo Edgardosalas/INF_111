@@ -2,41 +2,41 @@ package Laboratorios.Lab6.E1;
 
 public class Persona {
     protected
-    int ci;
-    String nomc;
-    int fechan;
+    int cisbe;
+    String nomcsbe;
+    int fechansbe;
     public
     Persona()
     {
-        ci=12345;
-        nomc="Marcelo Arequipa";
-        fechan=1990;
+        cisbe=12345;
+        nomcsbe="Marcelo Arequipa";
+        fechansbe=1990;
     }
-    Persona(int a, String b, int c)
+    Persona(int asbe, String bsbe, int csbe)
     {
-        ci=a;
-        nomc=b;
-        fechan=c;
+        cisbe=asbe;
+        nomcsbe=bsbe;
+        fechansbe=csbe;
     }
     int obtc()
-    {return ci;}
+    {return cisbe;}
     String obtn()
-    {return nomc;}
+    {return nomcsbe;}
     int obtf()
-    {return fechan;}
+    {return fechansbe;}
     void ponc(int a)
-    {ci=a;}
+    {cisbe=a;}
     void ponn(String a)
-    {nomc=a;}
+    {nomcsbe=a;}
     void ponf(int a)
-    {fechan=a;}
+    {fechansbe=a;}
     int edad()
-    {return 2023-fechan;}
+    {return 2023-fechansbe;}
     void leer()
     {
-        ci=Leer.datoInt();
-        nomc=Leer.dato();
-        fechan=Leer.datoInt();
+        cisbe=Leer.datoInt();
+        nomcsbe=Leer.dato();
+        fechansbe=Leer.datoInt();
     }
     void mostrart()
     {
@@ -44,6 +44,6 @@ public class Persona {
     }
     void mostrar()
     {
-        System.out.println("\n"+ci+"\t"+nomc+"\t\t"+fechan);
+        System.out.println("\n"+cisbe+"\t"+nomcsbe+"\t\t"+fechansbe);
     }
 }

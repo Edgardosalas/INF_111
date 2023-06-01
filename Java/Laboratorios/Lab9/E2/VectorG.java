@@ -2,50 +2,50 @@ package Laboratorios.Lab9.E2;
 
 public class VectorG <T> {
     private
-    Object dat[]=new Object[20];
-    int n;
+    Object datsbe[]=new Object[20];
+    int nsbe;
     private
     VectorG()
-    {n=1;}
+    {nsbe=1;}
     VectorG(T x, int t)
     {
-        int i; n=t;
-        for(i=1;1<=n;i++)
-        {dat[i]=x;}
+        int i; nsbe=t;
+        for(i=1;1<=nsbe;i++)
+        {datsbe[i]=x;}
     }
     VectorG(T a, T b, T c, T d, T e)
     {
-        n=5;
-        dat[1]=a; dat[2]=b; dat[3]=c;
-        dat[4]=d; dat[5]=e;
+        nsbe=5;
+        datsbe[1]=a; datsbe[2]=b; datsbe[3]=c;
+        datsbe[4]=d; datsbe[5]=e;
     }
     void invertir()
     {
-        int i,k; k=n;
+        int i,k; k=nsbe;
         T x;
-        for(i=1; i<=n/2; i++)
+        for(i=1; i<=nsbe/2; i++)
         {
-            x=(T)dat[i]; dat[i]=dat[k];
-            dat[k]=x; k=k-1;
+            x=(T)datsbe[i]; datsbe[i]=datsbe[k];
+            datsbe[k]=x; k=k-1;
         }
     }
     void mostrar()
     {
         int i;
-        System.out.println("\n");
-        for(i=1;i<=n;i++)
-        {System.out.println(" "+dat[i]);}
+        System.out.println("\nsbe");
+        for(i=1;i<=nsbe;i++)
+        {System.out.println(" "+datsbe[i]);}
     }
     void ordenar()
     {
         int i, j;
         T x;
-        for (i = 1; i <= n-1; i++) 
+        for (i = 1; i <= nsbe-1; i++) 
         {
-            for(j=i+1;j<=n;j++)
+            for(j=i+1;j<=nsbe;j++)
             {
-                if(dat[i].toString().compareTo(dat[j].toString())>0)
-                {x=(T)dat[i]; dat[i]=dat[j]; dat[j]=x;}
+                if(datsbe[i].toString().compareTo(datsbe[j].toString())>0)
+                {x=(T)datsbe[i]; datsbe[i]=datsbe[j]; datsbe[j]=x;}
             }    
         }
     }

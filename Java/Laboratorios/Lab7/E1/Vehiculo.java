@@ -2,24 +2,24 @@ package Laboratorios.Lab7.E1;
 
 public class Vehiculo implements Actor_I, Transporte_I {
     private
-    String placa;
-    String marca;
-    int modelo;
+    String placasbe;
+    String marcasbe;
+    int modelosbe;
     public 
     Vehiculo()
     {
-        placa="ACV-123";
-        marca="Toyota";
-        modelo=2000;
+        placasbe="ACV-123";
+        marcasbe="Toyota";
+        modelosbe=2000;
     }
     Vehiculo(String a, String b, int c)
     {
-        placa=a;
-        marca=b;
-        modelo=c;
+        placasbe=a;
+        marcasbe=b;
+        modelosbe=c;
     }
     int antiguedad()
-    {return 2020-modelo;}
+    {return 2020-modelosbe;}
     void mostrar()
-    {System.out.println(" "+placa+" "+marca+" "+modelo);}
+    {System.out.println(" "+placasbe+" "+marcasbe+" "+modelosbe);}
 }

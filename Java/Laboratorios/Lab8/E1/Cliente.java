@@ -2,43 +2,43 @@ package Laboratorios.Lab8.E1;
 
 public class Cliente {
     private
-    int ci;
-    String nom;
-    int fono;
+    int cisbe;
+    String nomsbe;
+    int fonosbe;
     public
     Cliente()
     {
-        ci=474747;
-        nom="Carlos Torrez";
-        fono=72516;
+        cisbe=474747;
+        nomsbe="Carlos Torrez";
+        fonosbe=72516;
     }
     Cliente(int a, String b, int c)
     {
-        ci=a;
-        nom=b;
-        fono=c;
+        cisbe=a;
+        nomsbe=b;
+        fonosbe=c;
     }
     int obtc()
-    {return ci;}
+    {return cisbe;}
     String obtn()
-    {return nom;}
+    {return nomsbe;}
     int obtf()
-    {return fono;}
+    {return fonosbe;}
     void ponc(int a)
-    {ci=a;}
+    {cisbe=a;}
     void ponn(String a)
-    {nom=a;}
+    {nomsbe=a;}
     void ponf(int a)
-    {fono=a;}
+    {fonosbe=a;}
     void leer()
     {
-        ci=Leer.datoInt();
-        nom=Leer.dato();
-        fono=Leer.datoInt();
+        cisbe=Leer.datoInt();
+        nomsbe=Leer.dato();
+        fonosbe=Leer.datoInt();
     }
     void mostrar()
     {
         System.out.println("\n*********Cliente********");
-        System.out.println("\t"+ci+"\t"+nom+"\t"+fono);
+        System.out.println("\t"+cisbe+"\t"+nomsbe+"\t"+fonosbe);
     }
 }

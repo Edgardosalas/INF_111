@@ -2,20 +2,20 @@ package Laboratorios.Lab6.E1;
 
 public class Alumno extends Persona{
     private
-    int matri;
-    int reguni;
+    int matrisbe;
+    int regunisbe;
     public
     Alumno()
     {
         super();
-        matri=246;
-        reguni=489765;
+        matrisbe=246;
+        regunisbe=489765;
     }
-    Alumno(int a, String b, int c, int d, int e)
+    Alumno(int sbea, String b, int c, int d, int e)
     {
-        super(a,b,c);
-        matri=d;
-        reguni=e;
+        super(sbea,b,c);
+        matrisbe=d;
+        regunisbe=e;
     }
     int obtci()
     {return super.obtc();}
@@ -24,26 +24,26 @@ public class Alumno extends Persona{
     int obtfe()
     {return super.obtf();}
     int obtma()
-    {return matri;}
+    {return matrisbe;}
     int obtre()
-    {return reguni;}
-    void ponci(int a)
-    {super.ponc(a);}
-    void ponno(String a)
-    {super.ponn(a);}
-    void ponf(int a)
-    {super.ponf(a);}
-    void ponma(int a)
-    {matri=a;}
-    void ponre(int a)
-    {reguni=a;}
+    {return regunisbe;}
+    void ponci(int sbea)
+    {super.ponc(sbea);}
+    void ponno(String sbea)
+    {super.ponn(sbea);}
+    void ponf(int sbea)
+    {super.ponf(sbea);}
+    void ponma(int sbea)
+    {matrisbe=sbea;}
+    void ponre(int sbea)
+    {regunisbe=sbea;}
     int edad()
     {return super.edad();}
     void leer()
     {
         super.leer();
-        matri=Leer.datoInt();
-        reguni=Leer.datoInt();
+        matrisbe=Leer.datoInt();
+        regunisbe=Leer.datoInt();
     }
     void mostrart()
     {
@@ -53,6 +53,6 @@ public class Alumno extends Persona{
     void mostrar()
     {
         super.mostrar();
-        System.out.println("\t"+matri+"\t"+reguni);
+        System.out.println("\t"+matrisbe+"\t"+regunisbe);
     }
 }

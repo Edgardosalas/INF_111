@@ -1,72 +1,72 @@
 public class Alumno {
 	private
-	  int coda;
-	  String ape="";
-	  String nom="";
-	  int edad;
-	  int sexo;
+	  int codasbe;
+	  String apesbe="";
+	  String nomsbe="";
+	  int edadsbe;
+	  int sexosbe;
 	 public
 	  Alumno()
-	  { coda = 10;
-	   ape  = "Torrez";
-	   nom  = "Cecilia";
-	   edad = 15;
-	   sexo = 0;
+	  { codasbe = 10;
+	   apesbe  = "Torrez";
+	   nomsbe  = "Cecilia";
+	   edadsbe = 15;
+	   sexosbe = 0;
 	  }
 	  Alumno(int a,String b, String c, int d, int e)
-	  { coda = a;
-	   ape  = b;
-	   nom  = c;
-	   edad = d;
-	   sexo = e;
+	  { codasbe = a;
+	   apesbe  = b;
+	   nomsbe  = c;
+	   edadsbe = d;
+	   sexosbe = e;
 	  }
 	  void leer()
 	  {System.out.println(" Intro el codigo: ");
-	   coda = Leer.datoInt();
-	   System.out.println(" Intro Apellido: ");
-	   ape = Leer.dato();
-	   System.out.println(" Intro Nombre: ");
-	   nom = Leer.dato();
-	   System.out.println(" Intro edad: ");
-	   edad= Leer.datoInt();
+	   codasbe = Leer.datoInt();
+	   System.out.println(" Intro apesbellido: ");
+	   apesbe = Leer.dato();
+	   System.out.println(" Intro nomsbebre: ");
+	   nomsbe = Leer.dato();
+	   System.out.println(" Intro edadsbe: ");
+	   edadsbe= Leer.datoInt();
 	   System.out.println(" Intro Sexo (1: Varon  0: Mujer)" );
-	   sexo = Leer.datoInt();
+	   sexosbe = Leer.datoInt();
 	  }
 	  void mostrar()
 	  {
-	   System.out.print(""+coda);
-	   System.out.print("\t"+ape);
-	   System.out.print("\t\t"+nom);
-	   System.out.print("\t"+edad);
-	   System.out.print("\t"+sexo+"\n");
+	   System.out.print(""+codasbe);
+	   System.out.print("\t"+apesbe);
+	   System.out.print("\t\t"+nomsbe);
+	   System.out.print("\t"+edadsbe);
+	   System.out.print("\t"+sexosbe+"\n");
 	  }
 	  int obtcoda()
-	  {  return(coda);}
+	  {  return(codasbe);}
 	  String obtape()
-	  {  return(ape);}
+	  {  return(apesbe);}
 	  String obtnom()
-	  {  return(nom);}
+	  {  return(nomsbe);}
 	  int obtedad()
-	  {  return(edad);}
+	  {  return(edadsbe);}
 	  int obtsexo()
-	  {  return(sexo);}
+	  {  return(sexosbe);}
 	  void ponercoda(int a)
-	  { coda = a; }
+	  { codasbe = a; }
 	  void ponerape(String a)
-	  { ape = a; }
+	  { apesbe = a; }
 	  void ponernom(String a)
-	  { nom = a; }
+	  { nomsbe = a; }
 	  void poneredad(int a)
-	  { edad = a; }
+	  { edadsbe = a; }
 	  void ponersexo(int a)
-	  { sexo = a; }
+	  { sexosbe = a; }
 	  void ponertodo(int a, String b, String c, int d, int e)
 	  {
-	   coda = a;
-	   ape  = b;
-	   nom  = c;
-	   edad = d;
-	   sexo = e;
+	   codasbe = a;
+	   apesbe  = b;
+	   nomsbe  = c;
+	   edadsbe = d;
+	   sexosbe = e;
 	  }
 
 }

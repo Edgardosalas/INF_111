@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class PrincipalArchiAlumno {
 	 public static void main(String[] args)
 	 {
-	  int op,num;
+	  int opsbe, numsbe;
 	  ArchiAlumno AA = new ArchiAlumno("Alumno2.dat");
 	  Alumno A = new Alumno();
 	  try
@@ -21,9 +21,9 @@ public class PrincipalArchiAlumno {
 	    System.out.println(" 9: ORDEN");
 	    System.out.println(" 10: SALIR ");
 	    System.out.println(" Intro Opcion ");
-	    op = Leer.datoInt();
+	    opsbe = Leer.datoInt();
 	    
-	    switch(op)
+	    switch(opsbe)
 	    {
 	     case 1: System.out.println("En Adicionar ");
 	       A.leer();
@@ -33,18 +33,18 @@ public class PrincipalArchiAlumno {
 	       AA.mostrar();
 	       break;
 	     case 3: System.out.println("Intro cod a buscar ");
-	       num=Leer.datoInt();
-	       AA.buscarcod(num);
+	       numsbe=Leer.datoInt();
+	       AA.buscarcod(numsbe);
 	       break;
 	     case 4: AA.consulmuj(0);
 	       break;
 	     case 5: System.out.println("Intro cod a eliminar ");
-	       num=Leer.datoInt();
-	       AA.eliminar(num);
+	       numsbe=Leer.datoInt();
+	       AA.eliminar(numsbe);
 	       break;
 	     case 6: System.out.println("Intro cod de alumno");
-	       num=Leer.datoInt();	
-	       AA.mostraredad(num);
+	       numsbe=Leer.datoInt();	
+	       AA.mostraredad(numsbe);
 	       break;
 	     case 7: AA.consulvar(1);
 	       break;
@@ -55,7 +55,7 @@ public class PrincipalArchiAlumno {
 	       AA.ordenar();
 	       break;
 	    }
-	   }while(op<=9);
+	   }while(opsbe<=9);
 	   System.out.println(" CHAUUUU... ");
 	  }
 	  catch(IOException e){}

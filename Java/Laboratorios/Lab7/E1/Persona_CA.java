@@ -3,24 +3,24 @@ package Laboratorios.Lab7.E1;
 abstract class Persona_CA implements Actor_I
 {
     protected
-    int ci;
-    String nom;
-    int fechan;
+    int cisbe;
+    String nomsbe;
+    int fechansbe;
     public
     abstract int edad();
     void ponci(int a)
-    {ci=a;}
+    {cisbe=a;}
     void ponnom(String a)
-    {nom=a;}
+    {nomsbe=a;}
     void ponfec(int a)
-    {fechan=a;}
+    {fechansbe=a;}
     int obtci()
-    {return ci;}
+    {return cisbe;}
     String obtnom()
-    {return nom;}
+    {return nomsbe;}
     int obtfec()
-    {return fechan;}
+    {return fechansbe;}
     void mostrar()
-    {System.out.println(" "+ci+" "+nom+" "+fechan);}
+    {System.out.println(" "+cisbe+" "+nomsbe+" "+fechansbe);}
 }
 

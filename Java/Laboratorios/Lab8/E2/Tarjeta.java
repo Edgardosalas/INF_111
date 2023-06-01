@@ -2,45 +2,45 @@ package Laboratorios.Lab8.E2;
 
 public class Tarjeta {
     private
-    int num;
-    String tipo;
-    String moneda;
+    int numsbe;
+    String tiposbe;
+    String monedasbe;
     public
     Tarjeta()
     {
-        num=124578;
-        tipo="Credito";
-        moneda="Bolivianos";
+        numsbe=124578;
+        tiposbe="Credito";
+        monedasbe="Bolivianos";
     }
     Tarjeta(int a, String b, String c)
     {
-        num=a;
-        tipo=b;
-        moneda=c;
+        numsbe=a;
+        tiposbe=b;
+        monedasbe=c;
     }
     int obtn()
-    {return num;}
+    {return numsbe;}
     String obtt()
-    {return tipo;}
+    {return tiposbe;}
     String obtm()
-    {return moneda;}
+    {return monedasbe;}
     void ponn(int a)
-    {num=a;}
+    {numsbe=a;}
     void pont(String a)
-    {tipo=a;}
+    {tiposbe=a;}
     void ponm(String a)
     {
-        moneda=a;
+        monedasbe=a;
     }
     void leer()
     {
-        num=Leer.datoInt();
-        tipo=Leer.dato();
-        moneda=Leer.dato();
+        numsbe=Leer.datoInt();
+        tiposbe=Leer.dato();
+        monedasbe=Leer.dato();
     }
     void mostrar()
     {
         System.out.println("\n*********Tarjeta********");
-        System.out.println("\t"+num+"\t"+tipo+"\t"+moneda);
+        System.out.println("\t"+numsbe+"\t"+tiposbe+"\t"+monedasbe);
     }
 }
