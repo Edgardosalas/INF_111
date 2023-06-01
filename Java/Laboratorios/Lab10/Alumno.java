@@ -23,11 +23,11 @@ public class Alumno {
 	  void leer()
 	  {System.out.println(" Intro el codigo: ");
 	   codasbe = Leer.datoInt();
-	   System.out.println(" Intro apesbellido: ");
+	   System.out.println(" Intro apellido: ");
 	   apesbe = Leer.dato();
-	   System.out.println(" Intro nomsbebre: ");
+	   System.out.println(" Intro nombre: ");
 	   nomsbe = Leer.dato();
-	   System.out.println(" Intro edadsbe: ");
+	   System.out.println(" Intro edad: ");
 	   edadsbe= Leer.datoInt();
 	   System.out.println(" Intro Sexo (1: Varon  0: Mujer)" );
 	   sexosbe = Leer.datoInt();
